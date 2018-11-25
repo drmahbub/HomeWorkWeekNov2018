@@ -1,0 +1,10 @@
+SQL SOFTWARE
+  XAMPP
+
+	Apache  Start
+	MySql   Start  Admin Click
+	Click SQL 
+
+
+	show databases ;
+	create database abcd ;

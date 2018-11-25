@@ -1,0 +1,29 @@
+DISTINCT
+retrive without duplicating
+
+
+SELECT city FROM students;
+will retrive all city name including duplicate name
+
+city
+Dhaka
+jessore
+Khulna
+Sylhet
+Dhaka
+Sylhet
+Khulna
+Barisal
+Sylhet
+Sylhet
+Dhaka
+
+
+SELECT DISTINCT city FROM students;
+will retrive only single city name without duplicate
+Dhaka
+jessore
+Khulna
+Sylhet
+Barisal
+

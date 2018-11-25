@@ -1,0 +1,119 @@
+		UFT
+
+What is Run Time Objects?
+	Physical Description of an Objects is called as Run Time Objects.
+	Edite box, Button,Link,Checkbox,Radio Button, Combo Box, Window, Dialog Box.
+
+What is Test Objects?
+	This is the reference of Run Time Objects used to write the 
+	Test Script based on application environment.
+	WinEdit/WebEdit,WinButton/WebButton
+
+What is Automation Objects?
+	User Created Objects.
+
+What Operation to Choose  for ComboBox?
+	Select "Item Name" or Select "Item Number"
+
+What Operation to Choose  for CheckBox?
+	Set "On/Off
+
+What Operation to Choose  for RadioButton?"
+	Set "Select"
+
+How do you Enhance the Script for Automation?
+	VbScript
+	Parameterization
+	Checkpoints
+	Regular Expression
+	Recovery Scenario
+	Environment Variable.
+
+How to Get Computer Name using UFT?
+	Automation Object
+	Set abc=createObject("wscript.network")
+	    def=abc.computername
+	    msgbox def
+How to Get Computer User Name from UFT
+	Automation Object
+		def=abc.username
+
+What is Set?
+	Set Variable = Createobject("Class value"
+		VbScript Statement
+	Browser.Page.WebEdit.Set "  "
+		Method
+How to Perform Automatic File System Operations?
+	Using VbScript  FileSystemObject 
+
+What is Syntax for FileSystemObject?
+	Set  Variable = CreateObject("Class Value")
+		Here Set is VbScript Statement.
+		CreateObject VbScript Buit-In Function.
+
+What are others Built-In Functions?
+	Msgbox Function
+	Array Function
+	Is Array Function
+	Is Numeric Function
+	Cint Function
+	Cdbl Function
+	CreateObject Function
+	Join Function
+	Date Function
+	Time Function
+	Len Function
+	StrComp Function
+	VarType Function
+	Split Function
+What are UFT Statements?
+	Declaration Statement
+		Variable > Dim
+		Constant > Const
+	Utility Statements
+		SystemUtil.Run
+	Test Object Statements
+		TestObject("ObjectName").Method/Operation
+		TestObject("ObjectName").Child TestObject("ObjectName").Method/Operation
+		
+	Conditional Statement
+		If a>b Then
+		Statements
+		End If
+	Loop Statements
+		For i=1 to 5 Step 1
+	Automation Object Statements
+		Set Variable= CreateObject("ClassName")
+	CheckPoint Statement
+	Output Value Statement
+	VbScript Statements
+		Dim,Option Explicit,  Set, For, With,
+		On Error Resume Next
+How to Make, Copy, Delete Folder using Automation Object Statements?
+	Set variable=createobject("ClassName")
+		variable.CreateFolder ("Folderpath\FolderName")
+How to Create Text File using Automation Object Statements?
+	Set variable=CreateObject("ClassName")
+		variable.CreateTextFile("FilePath\Extension")
+How many types of Operation in File System Operation?
+	High level Operation  > Create, Copy, Delete Folder\TextFile
+	Internal/Text Related Operation.  > Reading, Writing, Comparison, Search.
+How we can perform Text related operations?
+	Using Textstream Object
+What are the UFT Methods?
+	Capture method
+	Child Objects
+	GetRoProperty
+	GetTpProperty
+	GetToProperties
+	SetToProperty
+	GetVisibleText
+	GetItem
+	GetContent
+	GetItemsCount
+What is Syntax for Capture Bitmap?
+	Objecthierarchy.CaptureBitmap "FileName.bmp",True
+Why True used here?
+	True is used to exist the image if it is already present in the Path
+
+

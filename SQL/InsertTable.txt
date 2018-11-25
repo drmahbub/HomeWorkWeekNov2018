@@ -1,0 +1,9 @@
+INSERT INTO `students`
+(`Roll`, `Name`, `Gender`, `Age`, `GPA`, `City`)
+VALUES
+(10,'Abid','Male',21,3.50,'Dhaka');
+
+INSERT INTO `students`
+VALUES
+(11,'Aulid','Male',22,4.50,'jessore'),
+(12,'Ayesha','Female',21,4.30,'Khulna');

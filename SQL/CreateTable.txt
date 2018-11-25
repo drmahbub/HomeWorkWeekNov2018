@@ -1,0 +1,26 @@
+CREATE TABLE table_name
+(
+	column_name1 data_type(size),
+	------------ ---------------,
+	----------------------------,
+	column_name9  data_type(size)
+);
+
+DROP TABLE table_name;
+
+INSERT DATA IN TABLE
+
+INSERT INTO table_name(column1,.......column9)
+values
+(value1,.......value9);
+
+	OR
+INSERT INTO table_name
+values
+(value1,.....value9);
+
+INSERT INTO `students`
+(`Roll`, `Name`, `Gender`, `Age`, `GPA`, `City`)
+VALUES
+(100,'Abid','Male',25,4.4,'Dhaka')
+(101,'Aulid','Male',26,4.3,'Sylhet');

@@ -1,0 +1,377 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.15063}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\par
+12/06/2017\par
+* What use of " On Error Resume Next"\par
+\tab It allowes the Execution to Continue despite a runtime error.\par
+* Language supported by UFT\par
+\tab VbScript.   Also support JavaScript and Windows Shell Scripts.\par
+*  Technologies Supported by UFT\par
+\tab .NET,  WIndows mobile, Web, Web services, Java, Oracle,Stringray 1,  Siebel, People Soft, Delphi, Flex, Power builder, Terminal Emulator,\par
+* Set Permission to execute UFT Script from ALM\par
+\tab UFT >> Tool  >> OPTION  >> RUN  >> Other HP Product\par
+* Purpose of Terminal emulator add-in UFT\par
+\tab To Test Mainframe environment application object\par
+*Syntax to Open any widnows based application from UFT\par
+\tab InvokeApplicatin (" Path of Application ")\par
+\tab or\par
+\tab SystemUtil.Run(" Path of Application ")\par
+* Reusable Function and Action.\par
+\tab Function execute as External Library\par
+\tab Action calls the same Action with separate datatable\par
+* Debug the Programe\par
+\tab With Step Commands and Debug viewer.\par
+\tab\tab Step Commands ( Step Into,  Step Over  , Step Out )\par
+* Comment Script\par
+\tab Control + M\par
+\tab Control + Shift + M\par
+* Execute Single Action in UFT\par
+\tab Select Current Action \par
+* Which Framework was implemented in your project\par
+\tab Key-word driven framework by implementing User Defined Functions.\par
+*Extension of Recovery Scenario File\par
+\tab .qrs\par
+* Smart Identification\par
+\tab Identify the Object based on Base filter and Optional filter.\par
+* Ordinal Identifier\par
+\tab Index,  Location ,  Creation Time.\par
+* Mandatory and Assistive properties\par
+\tab Properties of an Object configured in Object Indentification.\par
+* Action \par
+\tab Independent action will not depend on another action.\par
+\tab Nested action will depend on Patent action.\par
+\tab\tab If parent action properties change it also affect child action.\par
+\tab\tab If Patent action called , child action also called automatically.\par
+\par
+\par
+12/03/2017\par
+\par
+* UFT Extension Script \tab > .mts\tab (mercury test script)\par
+* Local Object Repository Extension  >  .mtr  (mercury test repository)\par
+* Shared Object Repository Extension  >  .tsr   (test shared repository)\par
+* Function Library Extension   >   .vbs  ,    .qfl\par
+* Associate Shared Repository through Script\par
+\tab Utility Object  >  RepositoryCollection\par
+\tab Syntax  :   RepositotyCollection.add " path "\par
+* Count Number of Rows in Datatable\par
+\tab x = Datatable.GetRowCount\par
+\tab msgbox   x   \par
+* Associate Library Files to Test\par
+\tab 1 )  File >>  Settings  >> Resources  >>  (+) Add Associate Function Library\par
+\tab 2 )  ExecuteFile " Path " \par
+\tab\par
+\par
+12/02/2017\par
+*Short cut Key for Record\tab > F6\par
+* When we use Analog Recording?\par
+\tab Record on AUT based on X,Y co ordinats\par
+\tab\tab Using Signatures\par
+* When we use Low level Recording?\par
+\tab When we need exact X,Y coordination. like Hashmaps where clicking different sections of a picture takes you to different links\par
+* What are Standard and Custom Objects?\par
+\tab Standard Objects are Objects that belongs to all types of Application.\par
+\tab Custom Objects are user defined only within the Application.\par
+* How to Change Custom Objects to Standard Objects?\par
+\tab (1)Define Custom Objects as Virtual Objects.\par
+\tab Map Virtual Objects to Standard Objects  >> Tool >> Virtual Object >>Virtual Object Manager.\par
+\tab (2) Map Custom Classes to Standard Object Class  >> Tool  >>Object Identification\par
+* What is Check Points?\par
+\tab Check points are verification point , that compares expected to actual result and provide test result.\par
+\tab Standard, Text, Text area, Bitmap, Datatable, Accessiblity, XML, File, Table, Page, Image.\par
+* HIdden checkpoints >> Table, Page, Image\par
+*Back-end Checkpoints  >> Datatable, XML, File Content.\par
+* Web checkpoints  >> Accessiblity, XML,File Content, Table, Page, Image.\par
+* How do you validate any Property of Runtime Objects?\par
+\tab Standard Chekpoint  or  GetRoProperty\par
+\tab Syntax:   Variable  =  Object Type("Object Name").GetRoProperty("Property Name")\par
+\tab\tab The above will fetch the property value of an object and will stored in the varible  and if we need to validate that then we need to write a conditional statement(IF..)\par
+* How do you fetch property of Test Objects?\par
+\tab Using GetToProperty\par
+\tab Syntax   Variable  =  Object type("Object Name").GetToProperty("Property Name")\par
+* Hoe do you fetch All Properties from Test Object \par
+\tab Set  xyz = dialog("Login").winedit("Agent Name").GetToProperties()\par
+* How do you check the Availablity of an Object\par
+\tab Using Exist Method.\par
+* How do you Maximize the Window or Screen or Page?\par
+\tab Syntax \tab\tab Object type("Object name").maximize\par
+\par
+* How do you Open a Window or Screen or Page which is minimized to launch bar?\par
+\tab Syntax \tab\tab Object type("Object Name").restore\par
+* How do you move a Window, Screen or Page?\par
+\tab Syntax \tab\tab Object type("Object Name").move x,y\par
+* How do you get the Count of Items in a List or a Combo box?\par
+\tab Using GetItemsCount\par
+\tab Syntax \tab\tab Variable = Object type ("Object Name").GetItemsCount\par
+* Run-time Object\par
+\tab Run-time object are Object available on AUT(Application Under Test)\par
+*Test Object\par
+\tab Stored representative of the  Actual Objects of an application.\par
+* How do you add Objects to Object Repository?\par
+\tab Resources  >> Object Repository  >>  Add Object to Reposiroty (+)\par
+\tab Active Screen  >> Rt click on Object >> Select view/add Object\par
+* How do you add Objects to Object Repository when Application is not available?\par
+\tab Resources  >> Object Repository  >> Object  >> Define New Test Object \par
+* How do you convert a Normal action into Re-usable action?\par
+\tab By default every action is Re-usable\par
+\tab\tab Test name Pane >> Rt click on Action >> Action Properties  >> Re-usable\par
+* How do you convert Local Object to Re-usable Object?\par
+\tab Resources  >> Object Repository >> File >> Export Local Objects\par
+* File Extension of Shared Repository\par
+\tab >tsr\par
+* How do you associate Shared Object Repository to an Action?\par
+\tab Test Name Pane >> Action >> Rt Click >> Action Properties\par
+\tab Associated Repository >> Add \par
+* How many action you can create in a Test?\par
+\tab Any Number of Actions can be created in a single Test.\par
+* What are the Action Properties and Test Properties\par
+\tab Action properties are the properties of current action only.\par
+\tab Test properties belonging to total action properties in the current test.\par
+* What are the Methods associated with Action in reusing the Actions?\par
+\tab Call to Copy Action.\par
+\tab Call to Existing Action.\par
+* Difference between Sub-routine and Funtion\par
+\tab Sub-routine does not return value where as Function return values.\par
+* Difference between ByRef and ByVal\par
+\tab by Default Function is ByRef\par
+\tab When an Argument accept a Variable\par
+\tab\tab ByVal  >> The Value of Variables does not Change\par
+\tab\tab ByRef  >> The Value of Variables Change\par
+* Option Explicit\par
+\tab All Variables are must explicitly declare in Dim or ReDim statements.\par
+ \tab Uses of any undeclare variable causes unexpected errors at compile time.\par
+* Error Handling\par
+\tab Using Option Explicit Statement\par
+\tab Using Built-in Function.\par
+\tab Using Exit Statement.\par
+\tab Using On Error Resume Next.\par
+\tab Using Conditional Statement\par
+\tab Recovery Scenarios.\par
+* Run Modes in UFT\par
+\tab Normal, Analog, Low Level, Insight.\par
+* File extension of Bitmap Checkpoint\par
+\tab\tab >    .bmp  or .png \par
+* Edit Object in Share Object Repository\par
+\tab\tab Resources >> Object Repository Manager\par
+\tab\tab >> File >> Enable Editing.\par
+\tab\par
+\tab\par
+\par
+12/01/2017\par
+* Advantages of Automation\par
+\tab Repeatable, Reusable,Reliable, Compatable\par
+* When do you Choose/Option Automation?\par
+\tab If Application is Complex\par
+\tab Frequent changes in the Requirement or enhancement in the Application.\par
+\tab When there is Lot of Retesting.\par
+\tab When we verify Compatiblity.\par
+\par
+11/30/2017\par
+*Different methodologies in Agile\par
+\tab Extreme Programming, Scrum, Crystal, DSDM(Dynamic System Development Model),ASD(Adaptive Software Development), Feature Driven Development.\par
+\par
+\par
+11/24/2017\par
+* What is Primary Key?\par
+\tab Column or Columns name that has completely unique value throught the table. Primary key of a relational database identifies each record of the table. All the value of the Primary key should be Unique and Not Null.\par
+\tab A Table can contain only one Primary Keys\par
+\par
+\tab How to define Primary key\par
+\tab > PRIMARY KEY (ColumnName) ;\par
+\tab > PRIMARY KEY (ColumnName1, ColumnName2) ;\par
+\tab > ColumnName  IINTEGER  NOT NULL  PRIMARY KEY ;\par
+* How do you add a Column to a Table?\par
+\tab ALTER  TABLE  table_name\par
+\tab ADD column_name datatype; \par
+* What is Foreign Keys?\par
+\tab Foreign Key is a Key used to link Table together.\par
+\tab Foreign Key of one table refer to the Primary key to other table.\par
+\tab Table containing Foreign table called child table.\par
+\par
+11/22/2017\par
+* Web Services\par
+\tab Web Services are  Web components that transfer data between client and server.\par
+\tab\tab Any Service that is available on Internet or Intranet or VPN(Virtual Private \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab Network)\par
+\tab\tab A Services that uses Standard XML message format.\par
+\tab\tab A Service which Platform Independent as well as not restricted to particular\par
+\tab\tab Operating System or Programming Language.\par
+\tab\tab A Service which can be discovered by simple find mechanism over WWW \tab\tab\tab which is a URL\par
+\tab\tab A Service capable of exchanging information via HTTP or HTTPS protocol over \tab\tab\tab WWW\par
+\tab Web Services Component\par
+\tab\tab >    SOAP\tab Simple Object  Access Protocol\par
+\tab\tab >   WSDL\tab Web Services Description Language\par
+\tab\tab >   UDDI\tab\tab Universal Description Discovery and Integration\par
+\tab\tab >   RDF\tab\tab Resource Description Framwork.\par
+\par
+\par
+11/21/2017\par
+*Why do you choose QA Testing?\par
+\tab I love the Challenges\par
+\tab\tab Sometimes the challenge is long hours,sometimes its just Tedious \tab\tab\tab\tab reputation,and  often it's just the challenge of learning a new system and \tab\tab\tab hunting down the variables necessary to cause an error\par
+\tab I like to break things.\par
+\tab Never the same day twice, never boring\par
+\tab\tab Testing is an ever changing field. From day to day our job are rarely the same.\par
+\tab\tab We test different application using different browser,utilizing different user\par
+\tab\tab roles,and varied path of system.\par
+\tab Breaking software is much easier then fixing it.\par
+\tab Job security\par
+\tab Job you can do anywhere in the world, Onsite or Remote\par
+* What is Database?\par
+\tab Systemetic collection of Data. Where Data can be stored, extracted and manipulated,\par
+* When you write Test Case what level you write them?\par
+\tab I write them so detailed that anyone can understand them even without any domain knowledge.\par
+* Difference between Join and Union\par
+\tab Union combile Rows \par
+\tab Join combile Columns\par
+* Why you use Unix?\par
+\tab To check Error logs,Move files, Delete files, Modify files.\par
+* What is Test Plan?\par
+\tab A detailed documen that describe Test Strategy, Test Objective,Resources,Test Scehedule, Test Estimation,and Deliverables.\par
+\par
+11/20/2017\par
+* How do you decide when you tested enough\par
+\par
+11/19/2017\par
+* Exhaustive Testing is a Test Aproach with all possible input and precondition.\par
+\tab It is not possible/Impractical (Time,Budget consideration)\par
+\par
+* Test Objectives\tab\tab\tab\tab\tab Tools\par
+Functional and Regression Testing\tab\tab UFT, SELENIUM, \par
+Performance Testing\tab\tab\tab\tab Load Runner\par
+Bug Reporting\tab\tab\tab\tab\tab ALM,Bugzilla, Jira\par
+Test Management Tool\tab\tab\tab\tab HP Quality Center,\par
+* Tell me about Yourself\par
+* Explain SDLC Process.\par
+* How do you Join the Table\par
+* Who is a Good Tester \par
+* What kind of methodology you have used\par
+* Databases? \par
+* How do you assign a Defect\par
+* Tell me about Use Case\par
+\tab Details about Specific Functionality.\par
+\tab How a user uses a Sustem to accomplish a Sepecific Goal.\par
+\tab Three elements:  Actors\par
+\tab\tab\tab   System\par
+\tab\tab\tab   Goals\par
+\tab It is widely used in developing test in System or Acceptance level.\par
+\tab How to write?\par
+\tab\tab Description, Actors, Priority, Pre-Condition,Flow of Events.Post Condition, \par
+* What do you include in a Test Case\par
+\tab Test Case ID, Module/Test Case Name, Description,Test Scenario,Precondition,\par
+\tab Dependency,\par
+* What do you include in a Test Plan\par
+\tab Scope of Project, Feature to be tested, Feature not to be Tested,Resource allocation, \par
+\tab Time allocation, Risk analysis, Entry criteria, Exit criteria, Roles and Responsiblity.\par
+* What kind of statement do you write to validate Data.\par
+\tab DML(Data Manipulation Language).\par
+* What is FRD\par
+\tab Functional Requirement Document.\par
+* What is Functional Testing\par
+* What is Negative Testing?\par
+\tab Negative Testing is Validating the application against Invalid Data.\par
+* What is Smoke Testing?\par
+\tab Checking the Vital parts of Software.\par
+\tab Also called "Build verification Testing". It comprises with a sets of non exhaustive testing to ensure major function of the software is working.\par
+\tab The result of this test is used to decide whether the Build is Stable enough to proceed for further testing.\par
+* What do you mean by Good Requirement\par
+\tab A Good requirement is well(detail) written. or that is written in basic term that anyone can understand that.\par
+\tab Clear( Concise,Small),Varifiable(Testable),Understable,Feasible(Realistic,Possible)\par
+* Does your company follow any Testing Standard?\par
+\tab Yes, such as : 2-3 second on Performance test ...going to one page to another(web?)\par
+* What do you mean by Different Browser Testing\par
+\tab Test the application on different type of Browser like IE, Chrome, Firefox to see if the application works properly on all the browsers.\par
+* After detect an Issue how long you take to add that issue in the bug tracking tool?\par
+\tab 5-7 minutes.\par
+* Do you use any tool for Load Testing?\par
+\tab Load Runner.\par
+* You have a table with Firstname, Lastname,Address, Zip code, Salary. Write a Statement to find out who is making highest salary?\par
+\tab Select Max(Salary) from tablename\par
+\tab\par
+\par
+11/16/2017\par
+UFT\par
+Descriptive Programming \par
+\tab 2 way\par
+\tab 1> Entering Property abd Value directly ibto Statements\par
+\tab 2> Using Description Object\par
+* Two script engines can interpret VBScript\par
+\tab VBScript.dll invoke by asp.dll  used in Web Environment\par
+\tab Wscript.exe & Cscript in Windows GUI environment\par
+* In VBScript all Variables are of " Variant " that can store any type of value.\par
+\tab Name of Variable must begin with a letter and within 255 characters.\par
+*QTP Environmental Variables\par
+\tab Built-In, User Defined (Internal, External)\par
+\tab Built-In > Local host name, OS, OSVersion, UserName\tab ProductDir,ProductName,TestDir,TestName \par
+\tab User Defined External from outside of test.\par
+\par
+\par
+\par
+18/11/2017\par
+* Can Smart Identification can be used in Descriptive Programming?\par
+\tab NO. Smart Identification works with Object Repository\par
+\tab DP works with direct Input Property/Values\par
+*Open write on Notepad\par
+\ul *FSO(File System Objects)\ulnone\par
+\tab Create Folder,Copy Folder, Delete Folder\par
+\tab Create Text Files, Read Data, Write Data, Compare Data\par
+\tab Search Operations\par
+How to perform Automatic File System Operations\par
+\tab Only for Flat File(Notepad).\par
+\tab  For External  operation (Open/Close/Delete)for Word/Excell only.\par
+\tab\tab to Read/Write in word and Excell use excell/word application.\par
+\tab Using VbScript FileSystemObject we can perform automatic File System Operation.\par
+\tab Syntax :\par
+\tab\tab Set  Variable = CreateObject("Class Value")\par
+\tab\tab Set  -\tab VbScript Statement\par
+\tab\tab CreateObject  -\tab\tab VbScript Built-in Function\par
+\tab\tab Set variable = CreateObject ("Scripting.FileSystemObjects")  \par
+\tab\tab\tab\tab Not Case Sensitive\par
+* FSO \tab > High Level Operation\par
+\tab Low Level Operation\par
+\tab High Level Operation > Create, Copy, Delete\par
+\tab Low level Operation > Read, Write \par
+\tab\tab 1> Read > Character by Character\par
+\tab\tab\tab Line by Line\par
+\tab\tab\tab Read all\par
+\tab\tab 2> Write > Continous\par
+\tab\tab\tab Line by Line \par
+\tab\tab\tab Append (Add @ end of the line)\par
+\tab\tab 3> Comparison\par
+\tab\tab\tab by Size (* High Level)\par
+\tab\tab\tab by Text\par
+\tab\tab\tab by Binary Values\par
+\tab\tab 4> Search Operations\par
+* Using FileSystemObject we can perform High level Operation\par
+   Using TextStream Object we can perform Text related Operations.\par
+\tab TextStream Object is Sub object of FSO\par
+\tab First Create FSO then TextStream Object \par
+Set objFso = Createobject("Scripting.FileSystemObject")\par
+Set mytxt = objFso.CreateTextFile ("FilePath", File Mode)\par
+Set mytxt = objFso.OpenTextFile ("FilePath", File Mode)\par
+\tab File Mode for Text Files\par
+\tab\tab 1 for Read  (Default)\par
+\tab\tab 2 for Write\par
+\tab\tab 8 for Append\par
+**Conversion Functions\par
+\tab cint() Convert  from String to a variant of subtype  Integer\par
+\tab cdbl() From String to Double Value\par
+\tab cdate () From Vakid Date& Time to variant subtype Date\par
+\tab cbool() From String to Boolean\par
+\tab cstr() From Integer to String\par
+\tab ccur() From Expression to Currency\par
+\tab cbyte() From an Expression to Byte\par
+Validate Data\par
+\tab IsNumeric()\par
+\tab Isempty()\par
+\tab Isarray()\par
+\tab Isobject()\par
+* Count the Number of Browsers.\par
+*Count no of Links\par
+* "C:\\Users\\Mike\\Documents\\UFT\\Unified Functional Testing\\MSI\\HPE\\Unified Functional Testing\\samples\\Flights Application\\FlightsGUI.exe"\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 

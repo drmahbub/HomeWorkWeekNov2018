@@ -1,0 +1,5 @@
+Select
+
+SELECT column_name FROM table_name;
+SELECT column_name,column_name2 FROM table_name;
+SELECT * FROM table_name

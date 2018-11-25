@@ -1,0 +1,19 @@
+SQL
+1.  Find Table name from Data Table
+2.  Save file
+3.  Stop Saving file.
+4.  Find Employees with first name Jean.
+5.  Find out Employees first name start with D.
+6.  Find out Employees with first name Peter or/and last name Hall.
+7.  Find out Employees with employee id 103.
+8.  Find out Employees with Salary.
+9.  Find out Employees Daily Salary (22 working day/30 days months).
+10. Find out Employees Yearly Salary.
+11. Rename Column name.
+12. Find out Employees Salary and Commission .
+13. Find out Employees Who have Commission.
+14. Find out Employees Who Dont have Commission.
+15. Find out Salary with Commission.
+16. Find out Salary with Commission and add 0.2% Commission who dont have any Commission.
+17. Find out Maximum, Minimum and Average Salary.
+18. Find out Employees with Salary less then 11000.
